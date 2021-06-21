@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouping Tags</title>
+    <style>
+
+        body {
+            background-color: gray;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0px;
+        }
+
+        header {
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        nav {
+            background-color: gray;
+            padding: 5px;
+        }
+
+        nav > a {
+            text-decoration: none;
+            color: white;
+            margin-right: 20px;
+        }
+
+        nav > a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        section > ul {
+            text-align: center;
+        }
+
+        section > ul > li {
+            display: inline-block;
+            text-align: center;
+            padding: 0px 20px;
+        }
+
+        section > ul > li:hover {
+            text-decoration: underline;
+            cursor: pointer;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.514);
+        }
+
+        article {
+            background-color: lightgray;
+            padding: 5px 10px;
+            margin-top: 10px;
+            outline: 2px solid black;
+        }
+
+        article > h2 {
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.329);
+        }
+
+        article > p {
+            text-align: justify;
+        }
+
+        article > aside {
+            display: inline;
+            text-align: right;
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 2px;
+            margin: 0px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Meu site</h1>
+        <nav>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+        </nav>
+    </header>
+    <main>
+        <section id="assuntos">
+            <ul type="none">
+                <li>Esportes
+                <li>Educação
+                <li>Tecnologia
+                <li>Política
+                <li>Saúde
+            </ul>
+        </section>
+        <section id="noticias">
+            <article>
+                <h2>Noticia sobre educação</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim vitae ex deserunt sit veritatis laboriosam asperiores vel maiores perferendis necessitatibus culpa quidem qui, dicta rem amet minima voluptatem officia reiciendis cum consequatur. Asperiores a reprehenderit incidunt facilis earum repellendus aspernatur.</p>
+                <aside>
+                    <p><small>Artigo escrito por Gabriel Topal</small></p>
+                </aside>
+            </article>
+            <article>
+                <h2>Noticia sobre economia</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur illum temporibus quas ea voluptatem similique atque, reprehenderit nobis, modi ducimus architecto officiis natus consequuntur aperiam dolorum dolorem repellat molestias deleniti.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus velit dolorum quam corporis odio est, optio assumenda id non? Dolorem aliquid architecto repudiandae magni doloribus obcaecati veritatis deleniti quae, eligendi praesentium maxime hic quisquam quaerat ab atque amet cumque quas! Quas laboriosam debitis placeat iusto.</p>
+                <aside>
+                    <p><small>Artigo escrito por Gabriel Topal</small></p>
+                </aside>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p id="footer-p">Desenvolvido por Gabriel Topal</p>
+    </footer>
+
+</body>
+</html>
