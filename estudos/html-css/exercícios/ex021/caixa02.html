@@ -19,9 +19,14 @@
             margin: 10px;
         }
 
+        header > h1 {
+            text-align: center;
+        }
+
         nav {
             background-color: gray;
             padding: 5px;
+            box-shadow: 5px 3px 7px 1px rgba(34, 17, 17, 0.459);
         }
 
         nav > a {
@@ -60,7 +65,8 @@
             background-color: lightgray;
             padding: 5px 10px;
             margin-top: 10px;
-            outline: 2px solid black;
+            border: 2px solid black;
+            border-radius: 15px 0px;
         }
 
         article > h2 {
@@ -80,9 +86,25 @@
             background-color: black;
             color: white;
             text-align: center;
-            padding: 2px;
+            padding: 5px;
+        }
+
+        footer > p {
             margin: 0px;
         }
+
+        /*
+        div#bola {
+            background-color: white;
+            height: 100px;
+            width: 100px;
+            border: 2px solid black;
+            border-radius: 50%;
+            margin: auto;
+            margin-top: 10px;
+        }
+        */
+
     </style>
 </head>
 <body>
@@ -128,5 +150,7 @@
         <p id="footer-p">Desenvolvido por Gabriel Topal</p>
     </footer>
 
+    <div id="bola"></div>
+    
 </body>
 </html>
