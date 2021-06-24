@@ -194,6 +194,12 @@ footer {
     padding: 8px;
 }
 
-#footer-text > strong {
+#footer-link {
+    text-decoration: none;
+    background-color: transparent;
     color: white;
+}
+
+#footer-link::after {
+    content: none;
 }
