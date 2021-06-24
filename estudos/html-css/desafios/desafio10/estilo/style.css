@@ -6,32 +6,44 @@
     font-style: normal;
 }
 
-/* UTILITIES */
-
-.font-android {
-    font-family: 'Android', Arial, Helvetica, sans-serif;
-    color: #0B570D;
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
 }
 
-.content-text {
+body {
+    background-color: #a1eca1;
+}
+
+/* UTILITIES */
+
+p {
     text-align: justify;
     text-indent: 30px;
-    padding: 10px 0px;
+    padding: 15px 0px;
 }
 
 strong {
     color: #133a15;
 }
 
-h3.title-background {
+.font-android {
+    font-family: 'Android', Arial, Helvetica, sans-serif;
+    color: #0B570D;
+}
+
+
+.title-background {
     text-indent: 5px;
     background-image: linear-gradient(to right, #79EA7B, white);
 }
 
 a {
+    background-color: #79EA7B;
     color: #133a15;
     font-weight: bold;
     text-decoration: none;
+    padding: 2px 5px;
 }
 
 a:hover {
@@ -42,16 +54,12 @@ a::after {
     content: "🔗";
 }
 
+.img-align {
+    text-align: center;
+}
+
+
 /* HEADER */
-
-* {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-}
-
-body {
-    background-color: #79EA7B;
-}
 
 header {
     background-image: linear-gradient(to bottom, #25A827, #0B570D);
@@ -100,43 +108,76 @@ li.nav-itens:hover {
 
 #main-container {
     margin: auto;
-    max-width: 60%;
-    min-width: auto;
-
+    max-width: 900px;
 }
 
 main {
     background-color: white;
     margin: auto;
-    padding: 0px;
+    padding: 20px 0px;
     border-radius: 0px 0px 10px 10px;
     box-shadow: 0px 0px 5px 2px rgb(0 0 0 / 35%);
 }
 
 article {
-    padding: 20px;
+    padding: 10px 20px;
 }
 
 #article-video {
     background-color: #133a15;
-
+    padding: 20px 40px;
 }
 
-div#extra-container {
+/* ASIDE(EXTRA CONTENT) */
+
+#extra-container {
     background-color: #79EA7B;
-    padding: 10px;
     border-radius: 10px;
+    box-shadow: 0px 0px 5px 1px rgb(0 0 0 / 35%);
 }
 
-p#extra-title {
+#extra-title {
     background-color: #2A9B3E;
     color: white;
     font-weight: bold;
-    padding: 8px;
-    margin: 0;
+    padding: 10px;
+    border-radius: 10px 10px 0px 0px;
 }
 
+#extra-content-container {
+    padding: 10px;
+}
 
+#extra-ul-container {
+    padding: 10px 0px;
+    display: block;
+    text-align: left;
+}
+
+#extra-ul-1-container {
+    display: inline-block;
+    text-align: left;
+}
+
+#extra-ul-2-container {
+    display: inline-block;
+    text-align: left;
+}
+
+.extra-ul {
+    list-style-type: none;
+    padding-inline-start: 0px;
+}
+
+.extra-itens {
+    list-style-type: none;
+}
+
+.extra-itens::before {
+    content: "🗸 ";
+    font-style: normal;
+    font-weight: bold;
+}
 
 
 /* FOOTER */
@@ -150,11 +191,9 @@ footer {
     font-size: 13px;
     color: white;
     text-align: center;
-    padding: 10px;
+    padding: 8px;
 }
 
 #footer-text > strong {
     color: white;
 }
-
-
