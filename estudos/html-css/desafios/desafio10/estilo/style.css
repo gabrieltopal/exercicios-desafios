@@ -220,6 +220,10 @@ footer {
     color: white;
 }
 
+#footer-link:hover {
+    text-decoration: underline;
+}
+
 #footer-link::after {
     content: none;
 }
