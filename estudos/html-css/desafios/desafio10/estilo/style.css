@@ -148,7 +148,23 @@ article {
     padding: 20px 40px;
 }
 
-/* ASIDE(EXTRA CONTENT) */
+#box-video {
+    position: relative;
+    padding-bottom: 56.25%; 
+    padding-top: 25px;
+    height: 0;
+    margin:0 auto;
+}
+
+#box-video > iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* ASIDE (EXTRA CONTENT) */
 
 #extra-container {
     background-color: var(--cor1);
