@@ -17,9 +17,11 @@
     <h1>Olá, mundo!</h1>
     <p>Já me livrei da maldição</p>
     <script>
-        window.alert('Olá mundo!'); // Mensagem do navegador
-        window.confirm('Está gostando de JS?') // Janela de confirmação (OK e CANCEL)
-        window.prompt('Qual seu nome?') // Pergunta o nome...
+        var n1 = Number.parseFloat(window.prompt('Digite um número: '))
+        var n2 = Number.parseFloat(window.prompt('Digite outro número: '))
+        var soma = n1 + n2
+        window.alert(`A soma dos valores é ${soma}!`)
+        //window.alert('A soma dos valores é ' + soma + '!')
     </script>
 </body>
 </html>

@@ -17,9 +17,9 @@
     <h1>Olá, mundo!</h1>
     <p>Já me livrei da maldição</p>
     <script>
-        window.alert('Olá mundo!'); // Mensagem do navegador
-        window.confirm('Está gostando de JS?') // Janela de confirmação (OK e CANCEL)
-        window.prompt('Qual seu nome?') // Pergunta o nome...
+        var nome = window.prompt('Qual seu nome?')
+
+        window.alert(`Olá ${nome}, bem-vindo(a) ao nosso site, o seu nome possui ${nome.length} letras!`)
     </script>
 </body>
 </html>
