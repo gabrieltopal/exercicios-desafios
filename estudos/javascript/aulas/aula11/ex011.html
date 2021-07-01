@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embaixada Brasileira</title>
+</head>
+<body>
+    <h1>Nacionalidades</h1>
+    Digite o seu país de origem: <input type="text" name="txtcountry" id="txtcountry">
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res">
+
+    </div>
+    
+    <script>
+        function calcular() {
+            var txtc = document.querySelector('input#txtcountry')
+            var res = document.querySelector('div#res')
+            var país = txtc.value
+            res.innerHTML = `<p>Seu país de origem é o(a) <strong>${país}</strong>!</p>`
+            if(país == 'Brasil') {
+                res.innerHTML += `<p>Você é brasileiro! Seja muito bem-vindo a um pedacinho de nossa terra!</p>`
+            } else {
+                res.innerHTML += `<p>Você é estrangeiro! Como podemos ajudar?</p>`
+            }
+            res.innerHTML += `<p>Obrigado por utilizar os nossos serviços.</p>`
+        }
+    </script>
+
+</body>
+</html>
