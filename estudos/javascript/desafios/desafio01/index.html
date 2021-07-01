@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mensagens</title>
+    <style>
+        body {
+            font: normal 20px Arial;
+        }
+        div#box-buttons {
+            width: 100%;
+            text-align: center;    
+        }
+        div.buttons {
+            background-image: linear-gradient(to bottom, rgb(194, 194, 194), white);
+            width: 150px;
+            height: 100px;
+            margin: 10px;
+            text-align: center;
+            line-height: 100px;
+            display: inline-block;
+            border: 2px solid black;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Desafio das Mensagens</h1>
+    <div id="box-buttons">
+        <div class="buttons" id="bttn1">Botão 1</div>
+        <div class="buttons" id="bttn2">Botão 2</div>
+        <div class="buttons" id="bttn3">Botão 3</div>
+    </div>
+
+    <script>
+
+        var clicouB1 = document.querySelector('div#bttn1')
+        var clicouB2 = document.querySelector('div#bttn2')
+        var clicouB3 = document.querySelector('div#bttn3')
+        clicouB1.addEventListener('click', clicar1)
+        clicouB2.addEventListener('click', clicar2)
+        clicouB3.addEventListener('click', clicar3)
+        
+        function clicar1() {
+            alert('Você clicou no 1° botão!')
+        }
+        function clicar2() {
+            alert('Você clicou no 2° botão!')
+        }
+        function clicar3() {
+            alert('Você clicou no 3° botão!')
+        }
+    </script>
+</body>
+</html>
