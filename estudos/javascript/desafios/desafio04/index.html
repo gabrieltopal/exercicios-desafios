@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcula Troco</title>
+    <style>
+        body {
+            font: normal 20px Arial;
+        }
+        button {
+            font-size: 15px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculando o Troco</h1>
+    <button onclick="clicar()">Comprar produto</button>
+
+    <script>
+        function clicar() {
+            var produto = window.prompt('Que produto você está comprando?')
+            var valor_prod = prompt(`Quanto custa ${produto} que você está comprando?`)
+            var valor_pago = prompt(`Qual foi o valor que você deu para pagar ${produto}?`)
+            var troco = valor_pago - valor_prod
+            if (valor_pago < valor_prod) {
+                alert(`Você tentou comprar ${produto} que custa R$${valor_prod},00.
+Seu saldo de R$${valor_pago},00 é insuficiente.
+Adicione mais crédito e tente novamente.`)
+            } else {
+                alert(`Você comprou ${produto} que custou R$${valor_prod},00.
+Deu R$${valor_pago},00 em dinheiro e vai receber R$${troco},00 de troco.
+Volte sempre!`)
+            }
+        }
+    </script>
+</body>
+</html>
