@@ -29,9 +29,8 @@ header {
 }
 
 div {
-    margin: 30px;
     padding: 10px;
-    background-color: white;
+    text-align: justify;
 }
 
 /* FOOTER */
