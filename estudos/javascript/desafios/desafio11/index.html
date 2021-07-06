@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ano Bissexto</title>
+    <style>
+        body {
+            font: normal 20px Arial;
+        }
+        button {
+            font-size: 20px;
+            padding: 15px;
+        }
+        mark.pos {
+            background-color: rgba(172, 255, 47, 0.815);
+        }
+        mark.neg {
+            background-color: rgba(255, 0, 0, 0.685);
+        }
+    </style>
+</head>
+<body>
+    <h1>Ano Bissexto</h1>
+    <button onclick="calcular()">Verificar</button>
+    <div id="msg">
+        <p>Informe um ano para saber se ele é bissexto.</p>
+    </div>
+
+    <script>
+        function calcular() {
+            var ano = Number(prompt('Qual é o ano que você quer verificar?'))
+            var msg = document.getElementById('msg')
+            if (ano % 4 == 0 && ano % 100 != 0) {
+            msg.innerHTML = `
+            <h2>Analisando o ano de ${ano}...</h2>
+            <p>O ano de ${ano} <mark class='pos'><strong>É BISSEXTO</strong></mark> &#x2705;</p> 
+            `
+        } else if (ano % 400 == 0) {
+            msg.innerHTML = `
+            <h2>Analisando o ano de ${ano}...</h2>
+            <p>O ano de ${ano} <mark class='pos'><strong>É BISSEXTO</strong></mark> &#x2705;</p> 
+            `
+        } else {
+            msg.innerHTML = `
+            <h2>Analisando o ano de ${ano}...</h2>
+            <p>O ano de ${ano} <mark class='neg'><strong>NÃO É BISSEXTO</strong></mark> &#x274C;</p> 
+            `
+        } }
+    </script>
+</body>
+</html>
