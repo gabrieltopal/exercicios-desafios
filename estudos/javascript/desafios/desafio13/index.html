@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Situação do aluno</title>
+    <style>
+        body {
+            font: normal 20px Arial;
+        }
+        button {
+            font-size: 20px;
+            padding: 20px;
+        }
+        #reprovado > mark {
+            background-color: rgba(255, 0, 0, 0.459);
+            color: darkred;
+        }
+        #recuperação > mark {
+            background-color: rgb(255, 255, 164);
+            color: rgb(185, 130, 9);
+        }
+        #aprovado > mark {
+            background-color: lightgreen;
+            color: rgb(0, 138, 0);
+        }
+    </style>
+</head>
+<body>
+    <h1>Situação do aluno</h1>
+    <button onclick="calcular()">Entrar com as notas</button>
+    <div id="msg">
+        <p>Clique no botão acima para informar as notas do aluno.</p>
+    </div>
+
+    <script>
+        function calcular() {
+            var aluno = prompt('Qual é o nome do aluno?')
+            var primeira_nota = Number(prompt(`Informe a primeira nota de ${aluno}:`))
+            var segunda_nota = Number(prompt(`Informe a segunda nota de ${aluno}:`))
+            var media = (primeira_nota+segunda_nota)/2
+            var res = document.getElementById('msg')
+            res.innerHTML = `<h2>Analisando a situação de ${aluno}</h2>
+            <p>Com as notas ${primeira_nota} e ${segunda_nota}, <strong>a média é ${media}</strong></p>`
+            if (media < 3) {
+                res.innerHTML +=`<p id='reprovado'>Com média abaixo de 3,0, o aluno está <mark><strong>REPROVADO</strong></mark></p>`
+            } else if (media < 6) {
+                res.innerHTML +=`<p id='recuperação'>Com média entre 3,0 e 6,0, o aluno está em <mark><strong>RECUPERAÇÃO</strong></mark></p>`
+            } else {
+                res.innerHTML +=`<p id='aprovado'>Com média acima de 6,0, o aluno está <mark><strong>APROVADO</strong></mark></p>`
+            }
+        }
+    </script>
+</body>
+</html>
