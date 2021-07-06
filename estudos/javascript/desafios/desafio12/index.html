@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mudança de preço</title>
+    <style>
+        body {
+            font: normal 20px Arial;
+        }
+        button {
+            font-size: 20px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mudança de preço</h1>
+    <button onclick="calcular()">Verificar</button>
+    <div id="msg">
+        <p>Clique no botão acima para analisar a mudança de preço.</p>
+    </div>
+
+    <script>
+        function calcular() {
+            var preço_antes = Number(prompt('Qual era o preço anterior do produto?'))
+            var preço_atual = Number(prompt('Qual é o preço atual do produto?'))
+            var msg = document.getElementById('msg')
+            var aumento = 100*(preço_atual-preço_antes)/preço_antes
+            var decremento = 100*(preço_antes-preço_atual)/preço_atual
+            msg.innerHTML = `
+            <h2>Analisando os valores informados</h2>
+            <p>O produto custava R$${preço_antes},00 e agora custa R$${preço_atual},00.</p>
+            `
+            if (preço_atual > preço_antes) {
+                msg.innerHTML += `
+                <p>Hoje o produto está mais caro.</p>
+                <p>O preço subiu R$${preço_atual - preço_antes},00 em relação ao preço anterior.</p>
+                <p>Uma variação de ${aumento.toFixed(2)}% pra cima.</p>
+                `
+            } else {
+                msg.innerHTML += `
+                <p>Hoje o produto está mais barato.</p>
+                <p>O preço caiu R$${preço_antes - preço_atual},00 em relação ao preço anterior.</p>
+                <p>Uma variação de ${decremento.toFixed(2)}% pra baixo.</p>
+                `
+            }
+        }
+    </script>
+</body>
+</html>
