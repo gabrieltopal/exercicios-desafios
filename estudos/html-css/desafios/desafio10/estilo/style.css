@@ -86,7 +86,7 @@ img.responsive-img {
 header {
     background-image: linear-gradient(to bottom, var(--cor3), var(--cor4));
     padding: 10px;
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.39);
+    box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.39);
 }
 
 header > h1 {
@@ -117,14 +117,17 @@ ul#nav-menu {
 li.nav-itens {
     color: var(--cor1);
     font-size: 14px;
+    font-weight: bold;
     display: inline-block;
     padding: 5px 10px;
+    margin: 0px 4px;
+    transition-duration: 0.5s;
 }
 
 li.nav-itens:hover {
     background-color: var(--cor1);
     color: var(--cor5);
-    border-radius: 2px;
+    border-radius: 5px;
     cursor: pointer;
 }
 
