@@ -39,6 +39,7 @@ body {
 p {
     text-align: justify;
     text-indent: 30px;
+    line-height: 2em;
     padding: 15px 0px;
 }
 
@@ -81,6 +82,10 @@ img.responsive-img {
     width: 100%;
 }
 
+#bugdroid-img {
+    max-width: 350px;
+}
+
 /* HEADER */
 
 header {
@@ -120,7 +125,7 @@ li.nav-itens {
     font-weight: bold;
     display: inline-block;
     padding: 5px 10px;
-    margin: 0px 4px;
+    margin-right: 10px;
     transition-duration: 0.5s;
 }
 
